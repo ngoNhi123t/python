@@ -1,0 +1,15 @@
+def add_time(start, duration, thu):
+    start.split()
+    h = start[0].split()
+    duration.split()
+    try:
+        h[0]=int[h[0]]
+        h[1]=int(h[1])
+        duration[0]=int(duration[0])
+        duration[1]=int(duration[1])
+    except:
+        return('Error:must be number')
+    if h[1] >=60:
+        return('Error: mini')
+    a= h[0] +duration[0]
+    

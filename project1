@@ -1,0 +1,63 @@
+def arithmetic_arranger(problems):
+# check input
+ if len(problems) > 5 :
+    return('Error: Too many problems.')
+     
+
+ for problem in problems:
+     problem.lstrip()
+     problem.rstrip()
+     mproblem = problem.split(" ")
+     if len(mproblem[0]) > 4 or len(mproblem[2]) > 4:
+        print('Error: Numbers cannot be more than four digits.')
+     if not (mproblem[1] == '+' or mproblem[1] == '-'):
+        print('Error: Operator must be \'+\' or \'-\'.' ) 
+     # check and tinh
+     try:
+       a = int(mproblem[0])  
+       b = int(mproblem[2])
+     except:
+        print('Error: Numbers must only contain digits.')
+        
+     if mproblem[1] == '+':
+        kq = mproblem[0] + mproblem[2]
+     elif mproblem[1] =='-':
+        kq = mproblem[0] - mproblem[2]
+     long = max(mproblem[0],mproblem[2] ) +2
+     fline = ""
+     sline = ""
+     tline = ""
+     aline = ""
+     fline = fline + mproblem[0].rjust(long) + (4*"")
+     mproblem[2]= mproblem[1]+mproblem[2].rjust(long-1)
+     sline = sline + mproblem[2] + (4*"")
+     tline = tline + len(mproblem[2])*"_"+ (4*"")
+     aline = aline + str(kq).rjust(long) + (4*"")
+     
+     print(fline)
+     print(sline)
+     print(tline)
+     print(aline)
+    
+    
+     
+     
+     
+      
+    
+
+         
+         
+    
+        
+        
+        
+
+
+
+
+
+     
+     
+    
+
